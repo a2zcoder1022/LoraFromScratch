@@ -7,3 +7,4 @@ This repository only requires 4 libraries
 - torch
 - datasets
 - transformers
+- scikit-learn
