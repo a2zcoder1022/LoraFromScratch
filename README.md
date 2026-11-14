@@ -31,6 +31,14 @@ flowchart LR
 
 The notebook loads the Stanford IMDb dataset, reserves 10% of its training split for validation, and keeps the official test split for final predictions. Reviews are tokenized with a 512-token limit. Both runs use two epochs, a batch size of 16, and a learning rate of `2e-5`; the LoRA run uses rank 64, alpha 128, and dropout 0.1. Full fine-tuning is the baseline.
 
+### Dataset credit
+
+This experiment uses the IMDb movie review dataset created by Andrew L. Maas and colleagues. Please cite the dataset paper when using this dataset:
+
+> Andrew L. Maas, Raymond E. Daly, Peter T. Pham, Dan Huang, Andrew Y. Ng, and Christopher Potts. "Learning Word Vectors for Sentiment Analysis." *Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies*, 2011, pp. 142–150.
+
+Dataset page: [IMDb Large Movie Review Dataset](https://ai.stanford.edu/~amaas/data/sentiment/).
+
 The parameter chart below is calculated from the BERT-base dimensions and this notebook's key/value adapter settings. It is not a training result. The LoRA count includes only its trainable A and B matrices; full fine-tuning counts all model parameters.
 
 The notebook currently contains cached output from an earlier run. Those values do not match the key/value-only configuration described here, so rerun the notebook from the first cell before using any displayed scores or counts.
