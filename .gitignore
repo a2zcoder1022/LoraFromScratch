@@ -13,3 +13,6 @@ env/
 # Local tooling files
 .pytest_cache/
 .mypy_cache/
+
+lora-distilbert-imdb/
+lora_model.pt

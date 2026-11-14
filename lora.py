@@ -17,8 +17,8 @@ class Lora(nn.Module):
 
 
     def review_weight_tree(self):
-         if len(self.target_weights) == 0 or len(self.target_weights) > 1:
-             raise ValueError("Target weights must be a list of one name")
+         if len(self.target_weights) == 0:
+             raise ValueError("Target weights must be a list of at least one name")
          
          for name, model in self.model.named_modules():
              abbrev_name = name.split(".")[-1]
